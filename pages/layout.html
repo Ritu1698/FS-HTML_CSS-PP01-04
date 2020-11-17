@@ -1,0 +1,96 @@
+<!doctype html>
+<title>Layout One</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #main {
+        display: flex;
+        flex: 1;
+    }
+
+    #main>section {
+        flex: 1;
+        order: 1;
+        background: limegreen;
+    }
+
+    #main>section>article {
+        padding: 10px;
+        margin: 10px;
+        background: lightgreen;
+    }
+
+    #main>nav,
+    #main>aside {
+        flex: 0 0 20vw;
+    }
+
+    #main>nav {
+        background: #D7E8D4;
+        order: 3;
+    }
+
+    #main>aside {
+        background: beige;
+        order: 2;
+    }
+
+    header,
+    footer {
+        background: yellowgreen;
+        height: 20vh;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+        padding: 1em;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <div id="main">
+        <section>
+            <article>
+                <h2>First Article</h2>
+                <p>Earlier in the day, Adityanath addressed two election meetings at Arwal (Arwal district) and Ramgarh
+                    (Kaimur) seeking votes for the NDA candidates. Both Rohtas and Kaimur districts share boundaries
+                    with Uttar Pradesh.</p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>The change was a 180-degree turn from Wednesday, when Twitter had banned the links to the article
+                    because the emails on which it was based may have been hacked and contained private information,
+                    both of which violated its policies.</p>
+            </article>
+            <article>
+                <h2>Third Article</h2>
+                <p>It said the application has stated that the petitioners have a very strong prima facie case and the
+                    issues raised are being considered by a Constitution Bench of the court.</p>
+            </article>
+        </section>
+        <nav>
+            <p>Nav</p>
+        </nav>
+        <aside>
+            <p>Aside</p>
+        </aside>
+    </div>
+    <footer>
+        Footer
+    </footer>
+</body>

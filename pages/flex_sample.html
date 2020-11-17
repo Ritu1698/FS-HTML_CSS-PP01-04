@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo Flexbox</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        .headerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background-color: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background-color: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .mainContainer {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            font-weight: bold;
+        }
+
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+
+        .mainContentItem {
+            text-align: left;
+            background: deepskyblue;
+            flex: 3 0px;
+            order: 2;
+        }
+
+        .sidebarLeftItem {
+            background: gold;
+            order: 1;
+        }
+
+        .sidebarRightItem {
+            background: hotpink;
+            order: 3;
+        }
+
+        .sidebarItem {
+            flex: 1 0 0;
+            border: 0 1px 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="headerContainer">
+        <h1>HEADER - Sample Flex Box Example </h1>
+    </header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First Article</h2>
+                <p>Earlier in the day, Adityanath addressed two election meetings at Arwal (Arwal district) and Ramgarh
+                    (Kaimur) seeking votes for the NDA candidates. Both Rohtas and Kaimur districts share boundaries
+                    with Uttar Pradesh.</p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>The change was a 180-degree turn from Wednesday, when Twitter had banned the links to the article
+                    because the emails on which it was based may have been hacked and contained private information,
+                    both of which violated its policies.</p>
+            </article>
+            <article>
+                <h2>Third Article</h2>
+                <p>It said the application has stated that the petitioners have a very strong prima facie case and the
+                    issues raised are being considered by a Constitution Bench of the court.</p>
+            </article>
+        </section>
+        <sidebar class="sidebarItem sidebarLeftItem">
+            <div class="center">
+                <p>Left Sidebar</p>
+            </div>
+        </sidebar>
+        <sidebar class="sidebarItem sidebarRightItem">
+            <div class="center">
+                <p>Right Sidebar</p>
+            </div>
+        </sidebar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+</body>
+
+</html>
