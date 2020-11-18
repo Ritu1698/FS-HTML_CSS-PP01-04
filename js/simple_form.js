@@ -16,6 +16,15 @@ email.oninput = function () {
     else
         emailError.textContent = "Email is Incorrect!"
 };
+const tel = document.querySelector("#tel");
+const telError = document.querySelector(".tel-error");
+number.oninput = function () {
+    let telRegex = RegExp('^\\d{2}(\\s{1}\\d{10})$');
+    if (telRegex.test(tel.value))
+        telError.textContent = "";
+    else
+        telError.textContent = "Tel. Number is Incorrect!"
+};
 const salary = document.querySelector("#salary");
 const output = document.querySelector(".salary-output");
 output.textContent = salary.value;
