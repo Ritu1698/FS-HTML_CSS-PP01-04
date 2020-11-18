@@ -18,7 +18,7 @@ email.oninput = function () {
 };
 const tel = document.querySelector("#tel");
 const telError = document.querySelector(".tel-error");
-number.oninput = function () {
+tel.oninput = function () {
     let telRegex = RegExp('^\\d{2}(\\s{1}\\d{10})$');
     if (telRegex.test(tel.value))
         telError.textContent = "";
