@@ -25,6 +25,17 @@ number.oninput = function () {
     else
         telError.textContent = "Tel. Number is Incorrect!"
 };
+const pwd = document.querySelector("#pwd");
+const pwdError = document.querySelector(".pwd-error");
+pwd.oninput = function () {
+    let pwdRegex1 = RegExp('^(?=.*[A-Z])(?=.*\\d)(?=.*[^\\dA-Z]).{8,}$');
+    let pwdRegex2 = RegExp('^[0-9a-zA-Z]*[@#$%][0-9a-zA-Z]*$');
+    if (pwdRegex1.test(pwd.value) && pwdRegex2.test(pwd.value))
+        pwdError.textContent = "";
+    else
+        pwdError.textContent = "Didn't Match Minimum Requirements!"
+};
+
 const salary = document.querySelector("#salary");
 const output = document.querySelector(".salary-output");
 output.textContent = salary.value;
